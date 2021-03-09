@@ -1,6 +1,15 @@
 # W2NetDisk
 
+> CopyRight Mark Polo 2021 All Rights Reserved.
+
+> Only used for the task R4 of W2OL-FrontEnd  Based on Bootstrap & Vue2
+
 > A Vue.js project
+
+## 项目默认配置
+
+- 本地运行端口号 8080
+- 跨域端口号 8088
 
 ## Build Setup
 
