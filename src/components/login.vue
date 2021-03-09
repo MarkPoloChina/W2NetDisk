@@ -73,7 +73,7 @@ export default {
       loginForm.append('password', this.form_login.passwd)
       axios({
         method: 'post',
-        url: 'http://localhost:8088/login',
+        url: 'http://47.115.200.30:8088/login',
         data: loginForm,
         headers: {
           'Content-Type': 'multipart/form-data'

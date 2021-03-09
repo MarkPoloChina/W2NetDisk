@@ -75,7 +75,7 @@ export default {
       else if (this.form_reg.passwd1 !== this.form_reg.passwd2) return alert('重复密码不正确')
       axios({
         method: 'post',
-        url: 'http://localhost:8088/register',
+        url: 'http://47.115.200.30:8088/register',
         data: {
           username: this.form_reg.username,
           password: this.form_reg.passwd1

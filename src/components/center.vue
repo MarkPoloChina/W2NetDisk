@@ -183,7 +183,7 @@ export default {
     },
     // 访问类
     visitSau (item) {
-      this.urlViewing = 'http://localhost:8088/view/' + item.id
+      this.urlViewing = 'http://47.115.200.30:8088/view/' + item.id
       this.isViewing = true
     },
     // 加载视图类
@@ -191,7 +191,7 @@ export default {
       var _this = this
       axios({
         method: 'get',
-        url: 'http://localhost:8088/admin/unreviewed',
+        url: 'http://47.115.200.30:8088/admin/unreviewed',
         params: {
           pageNumber: page
         },
@@ -213,7 +213,7 @@ export default {
     //   if (confirm('确定删除选定项？')) {
     //     axios({
     //       method: 'delete',
-    //       url: 'http://localhost:8088/delete',
+    //       url: 'http://47.115.200.30:8088/delete',
     //       headers: {
     //         Authorization: sessionStorage.token
     //       },
@@ -233,7 +233,7 @@ export default {
       if (confirm('确定否决选定项？')) {
         axios({
           method: 'post',
-          url: 'http://localhost:8088/admin/review',
+          url: 'http://47.115.200.30:8088/admin/review',
           headers: {
             Authorization: sessionStorage.token
           },
@@ -255,7 +255,7 @@ export default {
       if (confirm('确定通过选定项？')) {
         axios({
           method: 'post',
-          url: 'http://localhost:8088/admin/review',
+          url: 'http://47.115.200.30:8088/admin/review',
           headers: {
             Authorization: sessionStorage.token
           },
