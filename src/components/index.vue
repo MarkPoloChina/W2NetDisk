@@ -381,6 +381,8 @@ export default {
         tarId = this.selList[i]
         this.downloadsig(tarId)
       }
+      this.clearSelList()
+      this.getFileList(this.currentPage)
     },
     resetDirName () {
       var _this = this
