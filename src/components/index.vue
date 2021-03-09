@@ -217,7 +217,7 @@ export default {
     },
     // 访问类
     visitSau (item) {
-      this.urlViewing = 'http://localhost:8088/view/' + item.id
+      this.urlViewing = 'http://47.115.200.30:8088/view/' + item.id
       this.isViewing = true
       this.getbrcrList(item)
     },
@@ -252,7 +252,7 @@ export default {
       var _this = this
       axios({
         method: 'get',
-        url: 'http://localhost:8088/used',
+        url: 'http://47.115.200.30:8088/used',
         headers: {
           Authorization: sessionStorage.token
         },
@@ -271,7 +271,7 @@ export default {
       var _this = this
       axios.request({
         method: 'get',
-        url: 'http://localhost:8088/page',
+        url: 'http://47.115.200.30:8088/page',
         headers: {
           Authorization: sessionStorage.token
         },
@@ -303,7 +303,7 @@ export default {
         params: {
           dirId: this.currentDirId
         },
-        url: 'http://localhost:8088/dir/tree'
+        url: 'http://47.115.200.30:8088/dir/tree'
       }).then(function (response) {
         if (response.status === 200) {
           _this.dirList = response.data.data // IF
@@ -318,7 +318,7 @@ export default {
       var _this = this
       axios({
         method: 'post',
-        url: 'http://localhost:8088/dir/create',
+        url: 'http://47.115.200.30:8088/dir/create',
         headers: {
           Authorization: sessionStorage.token
         },
@@ -349,7 +349,7 @@ export default {
       }
       axios({
         method: 'post',
-        url: 'http://localhost:8088/upload',
+        url: 'http://47.115.200.30:8088/upload',
         params: {
           dirId: this.currentDirId,
           userId: this.currentUserId
@@ -372,7 +372,7 @@ export default {
       const iframe = document.createElement('iframe')
       iframe.style.display = 'none' // 防止影响页面
       iframe.style.height = 0 // 防止影响页面
-      iframe.src = 'http://localhost:8088/download/' + tarId
+      iframe.src = 'http://47.115.200.30:8088/download/' + tarId
       document.body.appendChild(iframe)
     },
     download () {
@@ -389,7 +389,7 @@ export default {
       var text = prompt('新目录名：')
       axios({
         method: 'put',
-        url: 'http://localhost:8088/dir/rename',
+        url: 'http://47.115.200.30:8088/dir/rename',
         headers: {
           Authorization: sessionStorage.token
         },
@@ -413,7 +413,7 @@ export default {
       tarId = this.selList[0]
       axios({
         method: 'put',
-        url: 'http://localhost:8088/rename',
+        url: 'http://47.115.200.30:8088/rename',
         headers: {
           Authorization: sessionStorage.token
         },
@@ -434,7 +434,7 @@ export default {
       if (confirm('确定删除选定项？')) {
         axios({
           method: 'post',
-          url: 'http://localhost:8088/delete',
+          url: 'http://47.115.200.30:8088/delete',
           headers: {
             Authorization: sessionStorage.token
           },
@@ -455,7 +455,7 @@ export default {
       if (confirm('确定删除本文件夹及上述所有项？')) {
         axios({
           method: 'delete',
-          url: 'http://localhost:8088/dir/delete',
+          url: 'http://47.115.200.30:8088/dir/delete',
           headers: {
             Authorization: sessionStorage.token
           },
