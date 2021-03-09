@@ -368,14 +368,19 @@ export default {
         }
       })
     },
+    downloadsig (tarId) {
+      const iframe = document.createElement('iframe')
+      iframe.style.display = 'none' // 防止影响页面
+      iframe.style.height = 0 // 防止影响页面
+      iframe.src = 'http://localhost:8088/download/' + tarId
+      document.body.appendChild(iframe)
+    },
     download () {
       var i, tarId
       for (i = 0; i < this.selList.length; i++) {
         tarId = this.selList[i]
-        window.location.href = 'http://localhost:8088/download/' + tarId
+        this.downloadsig(tarId)
       }
-      this.clearSelList()
-      this.getFileList(this.currentPage)
     },
     resetDirName () {
       var _this = this
