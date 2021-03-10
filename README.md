@@ -13,6 +13,10 @@
 - 本地运行端口号 8080
 - 跨域端口号 8088
 
+## 界面设计
+
+![preview](/preview.png)
+
 ## Build Setup
 
 ``` bash
