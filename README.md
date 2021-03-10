@@ -1,9 +1,7 @@
 # W2NetDisk-服务器部署版本
 
 > CopyRight Mark Polo 2021 All Rights Reserved.
-
 > Only used for the task R4 of W2OL-FrontEnd  Based on Bootstrap & Vue2
-
 > A Vue.js project
 
 ## 项目默认配置
@@ -14,13 +12,13 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
+# install dependencies 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:8080 热重载运行
 npm run dev
 
-# build for production with minification
+# build for production with minification 打包
 npm run build
 
 # build for production and view the bundle analyzer report
